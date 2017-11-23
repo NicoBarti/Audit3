@@ -14,7 +14,8 @@ export class NuevoUsuarioFormaComponent implements OnInit {
 
   constructor(private _tokenService: Angular2TokenService) {
       this._tokenService.init({
-         registerAccountPath: '/api/auth'
+         registerAccountPath: '/api/auth',
+         validateTokenPath: '/api/auth/validate_token'
        });
       }
 
