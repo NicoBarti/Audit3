@@ -12,14 +12,18 @@ import { Audit3RoutingModule } from './app-routing.module';
 import { NuevoUsuarioFormaComponent } from './nuevo-usuario-forma/nuevo-usuario-forma.component';
 import { NuevoUsuarioSesionComponent } from './nuevo-usuario-sesion/nuevo-usuario-sesion.component'
 
-import { UsuarioService } from './usuario.service'
+import { UsuarioService } from './usuario.service';
+import { HomeComponent } from './home/home.component'
+
+import { AuthGuard } from './auth-guard';
 
 @NgModule({
   declarations: [
     AppComponent,
     NuevoUsuarioComponent,
     NuevoUsuarioFormaComponent,
-    NuevoUsuarioSesionComponent
+    NuevoUsuarioSesionComponent,
+    HomeComponent
   ],
   imports: [
     HttpModule,
@@ -28,7 +32,8 @@ import { UsuarioService } from './usuario.service'
     FormsModule
   ],
   providers: [Angular2TokenService,
-              UsuarioService],
+              UsuarioService,
+              AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
