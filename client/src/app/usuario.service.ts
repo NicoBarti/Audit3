@@ -11,7 +11,7 @@ export class UsuarioService {
     this._tokenService.init({
       registerAccountPath: '/api/auth',
       validateTokenPath: '/api/auth/validate_token',
-      signInPath: '/api/auth/sign_in'
+      signInPath: '/api/auth/sign_in',
     });
   }
 
