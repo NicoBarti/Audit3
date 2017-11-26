@@ -22,6 +22,8 @@ export class UsuarioService {
   };
 
   registerAccount(params) {
-      this._tokenService.registerAccount(params);
+      this._tokenService.registerAccount(params).subscribe(res => {
+        this.router.navigate(['']);
+      });
   };
 }
