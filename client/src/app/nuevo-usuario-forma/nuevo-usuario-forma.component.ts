@@ -11,7 +11,7 @@ import { UsuarioService } from '../usuario.service'
 })
 export class NuevoUsuarioFormaComponent implements OnInit {
 
-  model = new Usuario('', '', '');
+  model = new Usuario('', '', '','');
 
   constructor(private usuarioService: UsuarioService) {      }
 
@@ -21,6 +21,7 @@ export class NuevoUsuarioFormaComponent implements OnInit {
   register() {
      this.usuarioService.registerAccount({
        email:                this.model.email,
+       name:                 this.model.name,
        password:             this.model.password,
        passwordConfirmation: this.model.password
     });

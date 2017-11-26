@@ -12,7 +12,7 @@ import { UsuarioService } from '../usuario.service'
 export class NuevoUsuarioSesionComponent implements OnInit {
 
   constructor(private usuarioService: UsuarioService) { }
-  model = new Usuario('', '', '');
+  model = new Usuario('', '', '','');
 
   ngOnInit() {  }
 
