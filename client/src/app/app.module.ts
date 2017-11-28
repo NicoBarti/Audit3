@@ -16,6 +16,7 @@ import { UsuarioService } from './usuario.service';
 import { HomeComponent } from './home/home.component'
 
 import { AuthGuard } from './auth-guard';
+import { AuditcComponent } from './auditc/auditc.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AuthGuard } from './auth-guard';
     NuevoUsuarioComponent,
     NuevoUsuarioFormaComponent,
     NuevoUsuarioSesionComponent,
-    HomeComponent
+    HomeComponent,
+    AuditcComponent
   ],
   imports: [
     HttpModule,
