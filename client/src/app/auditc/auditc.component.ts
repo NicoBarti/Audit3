@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable} from 'rxjs/Observable';
 
 import { Puntajes } from '../puntajes'
+import { UsuarioService} from '../usuario.service'
+import {Userinfo} from '../userinfo';
 
 @Component({
   selector: 'app-auditc',
@@ -9,11 +12,19 @@ import { Puntajes } from '../puntajes'
 })
 export class AuditcComponent implements OnInit {
 
-  model = new Puntajes('','','')
+  constructor(private usuarioService: UsuarioService) { }
 
-  constructor() { }
+  model = new Puntajes('','','')
+  userInfo = new Userinfo('','')
 
   ngOnInit() {
+    this.usuarioService.get_userInfo().subscribe(res => {
+      this.userInfo = {
+          userid: res.json().data.id,
+          username: res.json().data.name
+        }
+        console.log(this.userInfo)
+      })
   }
 
   enviar() {
