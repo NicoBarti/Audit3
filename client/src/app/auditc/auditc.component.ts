@@ -14,25 +14,33 @@ export class AuditcComponent implements OnInit {
 
   constructor(private usuarioService: UsuarioService) { }
 
-  model = new Puntajes('','','')
+  model = new Puntajes('','','','')
   userInfo = new Userinfo('','')
 
   ngOnInit() {
     this.usuarioService.get_userInfo().subscribe(res => {
-      this.userInfo = {
-          userid: res.json().data.id,
-          username: res.json().data.name
-        }
-        console.log(this.userInfo)
-      })
+      console.log(res)
+      // this.model = {
+      //   p1: '',
+      //   p2: '',
+      //   p3: '',
+        // user_id: res.json().data.id
+      }
+
+      // this.userInfo = {
+      //     userid: res.json().data.id,
+      //     username: res.json().data.name
+      //   }
+        // console.log(this.model, 'modelo en auditc component')
+      // })
   }
 
   enviar() {
-    console.log(
-        this.model.p1
-        this.model.p2
-        this.model.p3
-      )
+    this.usuarioService.graba_audit(this.model
+      // this.model.p1,
+      // this.model.p2,
+      // this.model.p3
+    )
 
   }
 

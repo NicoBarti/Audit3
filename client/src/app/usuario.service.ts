@@ -4,13 +4,16 @@ import { Router } from '@angular/router';
 import {Jsonp} from '@angular/http';
 // import {Userinfo} from './userinfo';
 import {Observable} from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { HttpHeaders } from '@angular/common/http';
 
 
 @Injectable()
 export class UsuarioService {
 
   constructor(private _tokenService: Angular2TokenService,
-              private router: Router) {
+              private router: Router,
+              private http: HttpClient) {
     this._tokenService.init({
       registerAccountPath: '/api/auth',
       validateTokenPath: '/api/auth/validate_token',
@@ -34,12 +37,15 @@ export class UsuarioService {
       });
   };
 
-  // set_userInfo(res) {
-  //   this.userInfo = {
-  //     userid: res.json().data.id,
-  //     username: res.json().data.name
-  //   }
-  // };
+  graba_audit(audit) {
+    let body = JSON.stringify({audit: audit});
+    console.log(body)
+      this.http
+        .post('/api/audits', body, {
+          headers: new HttpHeaders().set('Content-Type', 'application/json')
+        })
+        .subscribe(res => {console.log(res)})
+  }
 
 
   get_userInfo(): Observable<datosUsuario[]> {
