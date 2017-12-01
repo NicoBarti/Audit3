@@ -39,7 +39,6 @@ export class UsuarioService {
 
   graba_audit(audit) {
     let body = JSON.stringify({audit: audit});
-    console.log(body)
       this.http
         .post('/api/audits', body, {
           headers: new HttpHeaders().set('Content-Type', 'application/json')

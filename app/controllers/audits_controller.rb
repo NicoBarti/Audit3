@@ -16,13 +16,13 @@ class AuditsController < ApplicationController
   # POST /audits
   def create
     # @user = User.find(params(:uid))
-    @audit = Audit.new("p1"=>-1, "p2"=>-2, "p3"=>4)
+    @audit = Audit.new(audit_params)
 
-    # if @audit.save
-    #   render json: @audit, status: :created, location: @audit
-    # else
-    #   render json: @audit.errors, status: :unprocessable_entity
-    # end
+    if @audit.save
+      render json: @audit, status: :created, location: @audit
+    else
+      render json: @audit.errors, status: :unprocessable_entity
+    end
   end
 
   # PATCH/PUT /audits/1
@@ -47,7 +47,6 @@ class AuditsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def audit_params
-      params.require(:audit).permit(:p1, :p2, :p3)
-        # :user_id)
+      params.require(:audit).permit(:p1, :p2, :p3, :user_id)
     end
 end
