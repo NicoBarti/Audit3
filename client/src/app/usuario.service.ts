@@ -47,7 +47,7 @@ export class UsuarioService {
   }
 
 
-  get_userInfo(): Observable<datosUsuario[]> {
+  get_userInfo(): Observable<any> {
       return  this._tokenService.get('/api/auth/validate_token')
   };
 

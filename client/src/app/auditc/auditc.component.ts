@@ -10,24 +10,22 @@ import {Userinfo} from '../userinfo';
   templateUrl: './auditc.component.html',
   styleUrls: ['./auditc.component.css']
 })
+
 export class AuditcComponent implements OnInit {
 
   constructor(private usuarioService: UsuarioService) { }
 
-  model = new Puntajes('','','','')
-  userInfo = new Userinfo('','')
+  // model = new Puntajes(undefined,undefined,undefined,undefined)
+  model = new Puntajes(undefined,undefined,undefined,undefined)
+
+  // userInfo = new Userinfo('','')
 
   ngOnInit() {
-    this.usuarioService.get_userInfo().subscribe(res => {
-      this.model = {
-        user_id: res.json().data.id
-      }
-    }
+  this.usuarioService.get_userInfo().subscribe(res => {this.model.user_id = res.json().data.id})
   }
 
   enviar() {
     this.usuarioService.graba_audit(this.model)
-
   }
 
 }
