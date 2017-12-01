@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :audits
   resources :profiles
   scope '/api' do
     mount_devise_token_auth_for 'User', at: 'auth'
