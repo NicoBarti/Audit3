@@ -4,6 +4,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {HttpModule} from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 import { Angular2TokenService } from 'angular2-token';
 
 import { AppComponent } from './app.component';
@@ -18,6 +20,7 @@ import { HomeComponent } from './home/home.component'
 
 import { AuthGuard } from './auth-guard';
 import { AuditcComponent } from './auditc/auditc.component';
+import { DatepickerComponent } from './datepicker/datepicker.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +29,14 @@ import { AuditcComponent } from './auditc/auditc.component';
     NuevoUsuarioFormaComponent,
     NuevoUsuarioSesionComponent,
     HomeComponent,
-    AuditcComponent
+    AuditcComponent,
+    DatepickerComponent
   ],
   imports: [
     HttpModule,
     BrowserModule,
-     HttpClientModule,
+    NgbModule.forRoot(),
+    HttpClientModule,
     Audit3RoutingModule,
     FormsModule
   ],

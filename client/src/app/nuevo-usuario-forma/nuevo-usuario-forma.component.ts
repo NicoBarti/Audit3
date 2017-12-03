@@ -11,7 +11,7 @@ import { UsuarioService } from '../usuario.service'
 })
 export class NuevoUsuarioFormaComponent implements OnInit {
 
-  model = new Usuario('', '', '','','');
+  model = new Usuario('', '', '','','','');
 
   constructor(private usuarioService: UsuarioService) {      }
 
@@ -26,6 +26,7 @@ export class NuevoUsuarioFormaComponent implements OnInit {
        passwordConfirmation: this.model.password
     });
     console.log(this.model.sexo)
+    console.log(this.model.fecha_nac)
   }
 
 }

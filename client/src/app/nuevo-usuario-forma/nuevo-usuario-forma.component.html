@@ -11,10 +11,24 @@
         <label for="email">Email</label>
         <input [(ngModel)]="model.email" id="email"
         type="email" class="form-control" name="email" placeholder="Email" required/>
+        <br>
 
+        <p>Fecha de Nacimiento</p>
+        <form class="form-inline">
+          <div class="form-group">
+            <div class="input-group">
+              <input class="form-control" placeholder="dd-mm-aaaa"
+                     name="dp" [(ngModel)]="model.fecha_nac" ngbDatepicker #d="ngbDatepicker">
+              <button class="input-group-addon" (click)="d.toggle()" type="button">
+                <img src="../assets/images/generales/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+              </button>
+            </div>
+          </div>
+        </form>
+        <br>
 
-        <div id="div_sexo" class="form-group required">
-          <!-- <label for="div_sexo"  class="control-label col-md-4  requiredField"> Sexo </label> -->
+        <p>Sexo</p>
+        <div id="div_sexo" class="form-group" required>
               <div class="controls col-md-8 "  style="margin-bottom: 10px">
               <label class="radio-inline">
                 <input type="radio" name="sexo" id="sexo_m" value="M" style="margin-right: 5px;"
@@ -31,7 +45,6 @@
 
         <input [(ngModel)]="model.passwordConfirmation" id="password_confirmation"
         type="password" class="form-control" name="password_confirmation" placeholder="Confirma contraseña" required autofocus="" />
-        <br>
 
 			  <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Crear</button>
 
