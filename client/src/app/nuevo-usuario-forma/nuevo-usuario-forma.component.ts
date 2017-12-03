@@ -11,7 +11,7 @@ import { UsuarioService } from '../usuario.service'
 })
 export class NuevoUsuarioFormaComponent implements OnInit {
 
-  model = new Usuario('', '', '','','','');
+  model = new Usuario('', '', '','',undefined,'');
 
   constructor(private usuarioService: UsuarioService) {      }
 

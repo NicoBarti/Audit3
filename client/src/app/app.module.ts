@@ -20,7 +20,6 @@ import { HomeComponent } from './home/home.component'
 
 import { AuthGuard } from './auth-guard';
 import { AuditcComponent } from './auditc/auditc.component';
-import { DatepickerComponent } from './datepicker/datepicker.component';
 
 @NgModule({
   declarations: [
@@ -29,8 +28,7 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
     NuevoUsuarioFormaComponent,
     NuevoUsuarioSesionComponent,
     HomeComponent,
-    AuditcComponent,
-    DatepickerComponent
+    AuditcComponent
   ],
   imports: [
     HttpModule,
