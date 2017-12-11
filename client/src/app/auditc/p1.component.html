@@ -1,0 +1,22 @@
+<form (ngSubmit)="enviar()" class="form-control">
+
+  <div>
+    <label for="p1"><h4>¿Con qué frecuencia consume alguna bebida alcoholica?</h4></label>
+    <br>
+    <select class="form-control input-lg"
+
+            [(ngModel)]="model.p1"
+            name="p1"
+            id="p1"
+            required>
+      <option *ngFor="let opcion of opciones" value="{{opcion.puntaje}}">{{opcion.texto}}</option>
+    </select>
+
+  </div>
+  <br>
+  <button type="submit" class="btn btn-success">
+    Siguiente</button>
+
+  </form>
+
+<!-- ng-options="opcion.texto for opcion in opciones track by opcion.puntaje" -->

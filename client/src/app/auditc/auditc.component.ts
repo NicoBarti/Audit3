@@ -4,7 +4,7 @@ import {Observable} from 'rxjs/Observable';
 import { Puntajes } from '../puntajes';
 import { UsuarioService} from '../usuario.service';
 import {Userinfo} from '../userinfo';
-import {OpcionesPreguntas} from '../opciones-preguntas'
+// import {OpcionesPreguntas} from '../opciones-preguntas'
 
 
 
@@ -17,21 +17,21 @@ import {OpcionesPreguntas} from '../opciones-preguntas'
 
 export class AuditcComponent implements OnInit {
 
-  constructor(private usuarioService: UsuarioService) { }
+  constructor() { }
 
   // Inicia modelo con p1, p2, p3 y UserId
-  model = new Puntajes(undefined,undefined,undefined,undefined);
+  // model = new Puntajes(undefined,undefined,undefined,undefined);
   // Rescata opciones de pregunta definidas en clase publica
-  opcionesP = OpcionesPreguntas
+  // opcionesP = OpcionesPreguntas
   //
   secuenciador = 1;
 
   ngOnInit() {
-  this.usuarioService.get_userInfo().subscribe(res => {this.model.user_id = res.json().data.id})
+  // this.usuarioService.get_userInfo().subscribe(res => {this.model.user_id = res.json().data.id})
   }
 
-  enviar() {
-    this.usuarioService.graba_audit(this.model)
-  }
+  // enviar() {
+  //   this.usuarioService.graba_audit(this.model)
+  // }
 
 }
