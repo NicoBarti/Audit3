@@ -4,13 +4,22 @@
   <form (ngSubmit)="enviar()">
 
     <div>
-      <label for="p1">Pregunta 1</label>
-      <input  type="number"
+      <label for="p1">¿Con qué frecuencia consume alguna bebida alcoholica?</label>
+      <select class="form-control"
               [(ngModel)]="model.p1"
               name="p1"
               id="p1"
               required>
+                <option *ngFor="let opcionP1 of opcionesP.p1" [value]="opcionP1">{{opcionP1}}</option>
+      </select>
     </div>
+
+    <button type="submit">Enviar</button>
+
+    </form>
+
+  </div>
+
 
     <br>
 
@@ -33,9 +42,3 @@
               id="p3"
               required>
     </div>
-
-  <button type="submit">Enviar</button>
-
-  </form>
-    
-</div>

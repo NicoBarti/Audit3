@@ -21,6 +21,7 @@ import { HomeComponent } from './home/home.component'
 
 import { AuthGuard } from './auth-guard';
 import { AuditcComponent } from './auditc/auditc.component';
+import { Auditcp1Directive } from './auditcp1.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AuditcComponent } from './auditc/auditc.component';
     NuevoUsuarioFormaComponent,
     NuevoUsuarioSesionComponent,
     HomeComponent,
-    AuditcComponent
+    AuditcComponent,
+    Auditcp1Directive
   ],
   imports: [
     HttpModule,
