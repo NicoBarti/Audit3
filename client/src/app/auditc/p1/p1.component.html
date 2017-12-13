@@ -1,20 +1,22 @@
-<form (ngSubmit)="enviar()" class="form-control">
+<form (ngSubmit)="almacenaPuntaje()" class="form-control">
 
   <div>
     <label for="p1"><h4>¿Con qué frecuencia consume alguna bebida alcoholica?</h4></label>
     <br>
     <select class="form-control input-lg"
 
-            [(ngModel)]="model.p1"
+            [(ngModel)]="model"
             name="p1"
             id="p1"
-            required>
+            required
+            #p1="ngModel">
       <option *ngFor="let opcion of opciones" value="{{opcion.puntaje}}">{{opcion.texto}}</option>
     </select>
 
   </div>
   <br>
-  <button type="submit" class="btn btn-success">
+  <button type="submit" class="btn btn-success"
+  [disabled]="p1.invalid">
     Siguiente</button>
 
   </form>
