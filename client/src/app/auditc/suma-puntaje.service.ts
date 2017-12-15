@@ -13,17 +13,18 @@ export class SumaPuntajeService {
   constructor( private router: Router ) { }
 
   setP1(p:number) {
-    this.p1 = p
+    this.p1 = Number(p)
     console.log('p1 seteatdo' + this.p1 + 'p2 es' + this.p2)
   }
 
   setP2(p:number) {
-    this.p2 = p
+    this.p2 = Number(p)
     console.log('p2 seteado' + this.p2 + 'p1 es' + this.p1)
   }
 
   setP3(p:number) {
-    this.p3 = p
+    this.p3 = Number(p)
+    console.log('puntaje total' + this.get_auditC_puntaje())
   }
 
   get_auditC_puntaje() {

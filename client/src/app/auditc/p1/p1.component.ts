@@ -2,6 +2,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import {OpcionesPreguntas} from '../opciones-preguntas'
 import {SumaPuntajeService} from '../suma-puntaje.service'
 
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-p1',
   templateUrl: './p1.component.html',
@@ -10,15 +12,15 @@ import {SumaPuntajeService} from '../suma-puntaje.service'
 
 export class P1Component {
 
-  @Output() siguientePregunta = new EventEmitter<boolean>();
-
-  constructor(private sumaPuntajeService: SumaPuntajeService) { }
+  constructor(private sumaPuntajeService: SumaPuntajeService,
+              private router: Router) { }
 
   opciones = OpcionesPreguntas.p1
   model: number;
 
   almacenaPuntaje() {
     this.sumaPuntajeService.setP1(this.model);
+    this.router.navigate(['p2'])
   }
 
   }

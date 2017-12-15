@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {OpcionesPreguntas} from '../opciones-preguntas'
 import {SumaPuntajeService} from '../suma-puntaje.service'
 
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-p2',
@@ -11,7 +13,8 @@ import {SumaPuntajeService} from '../suma-puntaje.service'
 
 export class P2Component implements OnInit {
 
-  constructor(private sumaPuntajeService: SumaPuntajeService) { }
+  constructor(private sumaPuntajeService: SumaPuntajeService,
+                private router: Router) { }
 
   opciones = OpcionesPreguntas.p1
   model: number;
@@ -20,7 +23,9 @@ export class P2Component implements OnInit {
   }
 
   almacenaPuntaje() {
-    this.sumaPuntajeService.setP2(this.model)
+    this.sumaPuntajeService.setP2(this.model);
+    this.router.navigate(['p3'])
+
   }
 
 }

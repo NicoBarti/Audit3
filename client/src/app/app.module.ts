@@ -20,10 +20,12 @@ import { UsuarioService } from './usuario.service';
 import { HomeComponent } from './home/home.component'
 
 import { AuthGuard } from './auth-guard';
-import { AuditcComponent } from './auditc/auditc.component';
-import { P1Component } from './auditc/p1/p1.component';
-import { P2Component } from './auditc/p2/p2.component';
-import { P3Component } from './auditc/p3/p3.component';
+// import { AuditcComponent } from './auditc/auditc.component';
+// import { P1Component } from './auditc/p1/p1.component';
+// import { P2Component } from './auditc/p2/p2.component';
+// import { P3Component } from './auditc/p3/p3.component';
+
+import { AuditcModule } from './auditc/auditc.module'
 
 
 @NgModule({
@@ -33,19 +35,21 @@ import { P3Component } from './auditc/p3/p3.component';
     NuevoUsuarioFormaComponent,
     NuevoUsuarioSesionComponent,
     HomeComponent,
-    AuditcComponent,
-    P1Component,
-    P2Component,
-    P3Component
+    // AuditcComponent,
+    // P1Component,
+    // P2Component,
+    // P3Component
   ],
   imports: [
     HttpModule,
     BrowserModule,
     NgbModule.forRoot(),
     HttpClientModule,
-    Audit3RoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AuditcModule,
+    Audit3RoutingModule,
+
   ],
   providers: [Angular2TokenService,
               UsuarioService,

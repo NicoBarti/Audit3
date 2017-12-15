@@ -3,7 +3,7 @@ import {Observable} from 'rxjs/Observable';
 import { Puntajes } from '../puntajes';
 import { UsuarioService} from '../usuario.service';
 import {Userinfo} from '../userinfo';
-import {SumaPuntajeService} from './suma-puntaje.service'
+// import {SumaPuntajeService} from './suma-puntaje.service'
 
 import {P1Component} from './p1/p1.component'
 
@@ -13,7 +13,7 @@ import {P1Component} from './p1/p1.component'
   selector: 'app-auditc',
   templateUrl: './auditc.component.html',
   styleUrls: ['./auditc.component.css'],
-  providers: [SumaPuntajeService]
+  providers: []
 })
 
 export class AuditcComponent implements OnInit {
