@@ -4,6 +4,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {HttpModule} from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
@@ -49,6 +50,7 @@ import { AuditcModule } from './auditc/auditc.module'
     ReactiveFormsModule,
     AuditcModule,
     Audit3RoutingModule,
+    BrowserAnimationsModule
 
   ],
   providers: [Angular2TokenService,
