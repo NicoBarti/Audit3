@@ -31,7 +31,7 @@ export class P3Component implements OnInit {
 
   almacenaPuntaje() {
     this.sumaPuntajeService.setP3(this.model);
-    this.router.navigate(['home'])
+    this.router.navigate(['auditc'])
   }
 
 

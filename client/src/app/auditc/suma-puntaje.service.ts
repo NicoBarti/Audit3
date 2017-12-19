@@ -14,21 +14,21 @@ export class SumaPuntajeService {
 
   setP1(p:number) {
     this.p1 = Number(p)
-    console.log('p1 seteatdo' + this.p1 + 'p2 es' + this.p2)
   }
 
   setP2(p:number) {
     this.p2 = Number(p)
-    console.log('p2 seteado' + this.p2 + 'p1 es' + this.p1)
   }
 
   setP3(p:number) {
-    this.p3 = Number(p)
-    console.log('puntaje total' + this.get_auditC_puntaje())
+    this.p3 = Number(p);
+    this.set_auditC_puntaje()
   }
 
-  get_auditC_puntaje() {
-    if(this.p1===undefined || this.p2===undefined || this.p3===undefined) {console.log('error en suma de puntajes, no se han respondido todas las preguntas')}
-    else { return this.p1 + this.p2 + this.p3}
+  set_auditC_puntaje() {
+    if(this.p1===undefined || this.p2===undefined || this.p3===undefined)
+    {this.router.navigate(['auditc/p1'])}
+    else { let suma = this.p1 + this.p2 + this.p3
+            console.log(suma)}
   }
 }

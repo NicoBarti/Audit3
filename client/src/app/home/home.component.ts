@@ -17,8 +17,8 @@ export class HomeComponent implements OnInit {
     private sumaPuntajeService: SumaPuntajeService) { }
 
     ngOnInit() {
-    let model = this.sumaPuntajeService.get_auditC_puntaje();
-    console.log(model)
+    // let model = this.sumaPuntajeService.get_auditC_puntaje();
+    // console.log(model)
     }
 
 }

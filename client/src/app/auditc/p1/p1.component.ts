@@ -27,7 +27,7 @@ export class P1Component {
 
   almacenaPuntaje() {
     this.sumaPuntajeService.setP1(this.model);
-    this.router.navigate(['p2'])
+    this.router.navigate(['auditc/p2'])
   }
 
   }

@@ -32,7 +32,7 @@ export class P2Component implements OnInit {
 
   almacenaPuntaje() {
     this.sumaPuntajeService.setP2(this.model);
-    this.router.navigate(['p3'])
+    this.router.navigate(['auditc/p3'])
 
   }
 

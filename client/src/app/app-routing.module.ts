@@ -5,6 +5,7 @@ import { NuevoUsuarioComponent } from './nuevo-usuario/nuevo-usuario.component';
 import { NuevoUsuarioSesionComponent } from './nuevo-usuario-sesion/nuevo-usuario-sesion.component';
 
 import { HomeComponent } from './home/home.component';
+import { AuditcComponent } from './auditc/auditc.component';
 import { AuthGuard } from './auth-guard';
 
 const routes: Routes = [
@@ -12,7 +13,7 @@ const routes: Routes = [
   { path: 'sign-in', component: NuevoUsuarioSesionComponent },
   {
      path: '',
-     component: HomeComponent,
+     component: AuditcComponent,
      canActivate: [AuthGuard]
    },
    // { path: '**', component: PageNotFoundComponent }
