@@ -32,12 +32,10 @@ import { Observable } from 'rxjs/Observable';
        });
        return Observable.create(observer => {
          this._tokenService.validateToken().subscribe(
-           res => {observer.next(true);
-                  console.log(observer)},
+           res => {observer.next(true)},
            err => {
              this.router.navigate(['/sign-in']);
-             observer.next(false);
-             console.log(observer)
+             observer.next(false)
            });
          });
        }
