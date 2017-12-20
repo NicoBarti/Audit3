@@ -5,9 +5,12 @@ import { P1Component }  from './p1/p1.component'
 import { P2Component }  from './p2/p2.component'
 import { P3Component }  from './p3/p3.component'
 import { AuditcComponent } from './auditc.component'
+import { AuthGuard } from '../auth-guard';
+
 
 const auditcRoutes: Routes = [
   {path: 'auditc',
+  canActivateChild: [AuthGuard],
   component: AuditcComponent,
   children: [
     {path: 'p1', component: P1Component},
