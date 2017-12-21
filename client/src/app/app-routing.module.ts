@@ -4,8 +4,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { NuevoUsuarioComponent } from './nuevo-usuario/nuevo-usuario.component';
 import { NuevoUsuarioSesionComponent } from './nuevo-usuario-sesion/nuevo-usuario-sesion.component';
 
-import { HomeComponent } from './home/home.component';
+// import { HomeComponent } from './home/home.component';
 import { AuditcComponent } from './auditc/auditc.component';
+import { BajoComponent } from './bajo/bajo.component';
+import { ModeradoComponent } from './moderado/moderado.component'
+
 import { AuthGuard } from './auth-guard';
 
 const routes: Routes = [
@@ -16,6 +19,8 @@ const routes: Routes = [
      component: AuditcComponent,
      canActivate: [AuthGuard]
    },
+   { path: 'b', component: BajoComponent },
+   { path: 'm', component: ModeradoComponent}
    // { path: '**', component: PageNotFoundComponent }
  ];
 

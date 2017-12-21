@@ -8,7 +8,7 @@ export class SumaPuntajeService {
   private p1: number;
   private p2: number;
   private p3: number;
-  // private auditC_puntaje: number;
+  private auditC_puntaje: number;
 
   constructor( private router: Router ) { }
 
@@ -28,7 +28,19 @@ export class SumaPuntajeService {
   set_auditC_puntaje() {
     if(this.p1===undefined || this.p2===undefined || this.p3===undefined)
     {this.router.navigate(['auditc/p1'])}
-    else { let suma = this.p1 + this.p2 + this.p3
-            console.log(suma)}
+    else { this.auditC_puntaje = Number(this.p1 + this.p2 + this.p3)}
+    this.navegaRiesgo()
   }
+
+  navegaRiesgo() {
+    if(this.auditC_puntaje > 4)
+      {
+        this.router.navigate(['m'])
+    else
+      {
+        this.router.navigate(['b'])
+    }
+  }
+
+
 }

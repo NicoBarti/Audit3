@@ -22,7 +22,9 @@ import { UsuarioService } from './usuario.service';
 
 import { AuthGuard } from './auth-guard';
 
-import { AuditcModule } from './auditc/auditc.module'
+import { AuditcModule } from './auditc/auditc.module';
+import { BajoComponent } from './bajo/bajo.component';
+import { ModeradoComponent } from './moderado/moderado.component'
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import { AuditcModule } from './auditc/auditc.module'
     NuevoUsuarioComponent,
     NuevoUsuarioFormaComponent,
     NuevoUsuarioSesionComponent,
+    BajoComponent,
+    ModeradoComponent,
     // HomeComponent,
   ],
   imports: [

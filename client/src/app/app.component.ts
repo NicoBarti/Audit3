@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  // templateUrl: './app.component.html',
-  template: `<router-outlet></router-outlet>`,
+  template: `<div class="jumbotron">
+            <router-outlet></router-outlet>
+            </div>`,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
