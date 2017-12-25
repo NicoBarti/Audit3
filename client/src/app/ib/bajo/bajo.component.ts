@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 @Component({
   // template: '<router-outlet></router-outlet>'
   selector: 'app-bajo',
-  templateUrl: './bajo.component.html',
-  styleUrls: ['./bajo.component.css']
+  templateUrl: './bajo.component.html'
+  // styleUrls: ['./bajo.component.css']
 })
 export class BajoComponent implements OnInit {
 
