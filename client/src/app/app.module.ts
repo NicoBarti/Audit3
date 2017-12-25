@@ -23,9 +23,7 @@ import { UsuarioService } from './usuario.service';
 import { AuthGuard } from './auth-guard';
 
 import { AuditcModule } from './auditc/auditc.module';
-import { BajoComponent } from './bajo/bajo.component';
-import { ModeradoComponent } from './moderado/moderado.component'
-
+import { IbModule } from './ib/ib.module';
 
 @NgModule({
   declarations: [
@@ -33,8 +31,7 @@ import { ModeradoComponent } from './moderado/moderado.component'
     NuevoUsuarioComponent,
     NuevoUsuarioFormaComponent,
     NuevoUsuarioSesionComponent,
-    BajoComponent,
-    ModeradoComponent,
+
     // HomeComponent,
   ],
   imports: [
@@ -45,6 +42,7 @@ import { ModeradoComponent } from './moderado/moderado.component'
     FormsModule,
     ReactiveFormsModule,
     AuditcModule,
+    IbModule,
     Audit3RoutingModule,
     BrowserAnimationsModule
 
