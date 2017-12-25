@@ -8,7 +8,7 @@ import { B2Component} from './bajo/b2/b2.component';
 import { B3Component } from './bajo/b3/b3.component';
 
 import { ModeradoComponent } from './moderado/moderado.component';
-
+import { M1Component } from './moderado/m1/m1.component';
 
 import { IbComponent } from './ib.component';
 
@@ -26,7 +26,8 @@ import { IbRoutingModule } from './ib-routing.module';
      BajoComponent,
      B3Component,
      IbComponent,
-     ModeradoComponent],
+     ModeradoComponent,
+     M1Component],
   providers: []
 })
 

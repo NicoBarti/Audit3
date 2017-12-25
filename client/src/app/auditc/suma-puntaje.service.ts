@@ -35,8 +35,7 @@ export class SumaPuntajeService {
   navegaRiesgo() {
     if(this.auditC_puntaje > 4)
       {
-        console.log('moderado')}
-        // this.router.navigate(['m'])}
+        this.router.navigate(['ib/m'])}
     else
       {
         this.router.navigate(['ib/b'])

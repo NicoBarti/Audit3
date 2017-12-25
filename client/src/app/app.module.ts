@@ -30,8 +30,7 @@ import { IbModule } from './ib/ib.module';
     AppComponent,
     NuevoUsuarioComponent,
     NuevoUsuarioFormaComponent,
-    NuevoUsuarioSesionComponent,
-
+    NuevoUsuarioSesionComponent
     // HomeComponent,
   ],
   imports: [
