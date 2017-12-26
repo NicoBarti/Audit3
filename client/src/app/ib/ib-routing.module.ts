@@ -8,6 +8,8 @@ import { B3Component} from './bajo/b3/b3.component'
 
 import { ModeradoComponent } from './moderado/moderado.component'
 import { M1Component} from './moderado/m1/m1.component'
+import { M2Component} from './moderado/m2/m2.component'
+
 
 import { IbComponent }  from './ib.component'
 
@@ -29,7 +31,9 @@ const auditcRoutes: Routes = [
     {path: 'm',
     component: ModeradoComponent,
     children: [
-      {path: 'm1', component: M1Component}
+      {path: 'm1', component: M1Component},
+      {path: 'm2', component: M2Component}
+
     ]}
   ]}
   ]
