@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {OpcionesPreguntas} from '../opciones-preguntas'
 import {SumaPuntajeService} from '../suma-puntaje.service'
 import {slideInDownAnimation} from '../../animaciones'
@@ -15,7 +15,7 @@ import { HostBinding } from '@angular/core';
   animations: [slideInDownAnimation]
 })
 
-export class P2Component implements OnInit {
+export class P2Component {
 
   @HostBinding('@routeAnimation') routeAnimation = true;
   @HostBinding('style.display')   display = 'block';
@@ -24,11 +24,9 @@ export class P2Component implements OnInit {
   constructor(private sumaPuntajeService: SumaPuntajeService,
                 private router: Router) { }
 
-  opciones = OpcionesPreguntas.p1
+  opciones = OpcionesPreguntas.p2
   model: number;
 
-  ngOnInit() {
-  }
 
   almacenaPuntaje() {
     this.sumaPuntajeService.setP2(this.model);

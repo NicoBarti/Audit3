@@ -23,7 +23,7 @@ export class P3Component implements OnInit {
   constructor(private sumaPuntajeService: SumaPuntajeService,
               private router: Router) { }
 
-  opciones = OpcionesPreguntas.p1
+  opciones = OpcionesPreguntas.p3
   model: number;
 
   ngOnInit() {
@@ -31,8 +31,6 @@ export class P3Component implements OnInit {
 
   almacenaPuntaje() {
     this.sumaPuntajeService.setP3(this.model);
-    // console.log(suma)
-    // this.router.navigate(['auditc'])
   }
 
 
