@@ -3,7 +3,6 @@
 		<form (ngSubmit)="signIn()" class="form-signin" #nuevaSesion="ngForm" >
 		    <h4 class="form-signin-heading">Bienvenido! Ingresa por favor</h4>
 
-
         <input [(ngModel)]="model.email" id="email"
         type="email" class="form-control" name="email" placeholder="Email"
 				#email="ngModel" ng-required="email" autofocus>
@@ -21,6 +20,8 @@
 					class="alert alert-danger">
 					Ingrese la contraseña
 					</div>
+
+					<router-outlet></router-outlet>
 
 			  <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit"
 				[disabled]="!nuevaSesion.form.valid">Entrar</button>

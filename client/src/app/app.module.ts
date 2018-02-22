@@ -24,13 +24,15 @@ import { AuthGuard } from './auth-guard';
 
 import { AuditcModule } from './auditc/auditc.module';
 import { IbModule } from './ib/ib.module';
+import { NuComponent } from './nuevo-usuario-sesion/nu/nu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NuevoUsuarioComponent,
     NuevoUsuarioFormaComponent,
-    NuevoUsuarioSesionComponent
+    NuevoUsuarioSesionComponent,
+    NuComponent
     // HomeComponent,
   ],
   imports: [

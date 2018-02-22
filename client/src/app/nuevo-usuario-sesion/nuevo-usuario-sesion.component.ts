@@ -23,6 +23,7 @@ export class NuevoUsuarioSesionComponent implements OnInit {
       email: this.model.email,
       password: this.model.password
     });
+    console.log('user sign in enviado')
   }
 
 

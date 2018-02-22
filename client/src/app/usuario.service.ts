@@ -27,7 +27,11 @@ export class UsuarioService {
     this._tokenService.signIn(params).subscribe(res => {
       // this.set_userInfo(res)
       this.router.navigate(['auditc/p1']);
-    });
+    },
+    err => {
+      this.router.navigate(['/sign-in/nu'])
+    }
+  );
   };
 
   registerAccount(params) {
