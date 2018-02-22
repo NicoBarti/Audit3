@@ -13,7 +13,7 @@ export class AuditcComponent implements OnInit {
   constructor( private router: Router) { }
 
   ngOnInit() {
-    this.router.navigate(['auditc/p1'])
+    this.router.navigate(['auditc/infoinicio'])
   // this.usuarioService.get_userInfo().subscribe(res => {this.model.user_id = res.json().data.id})
   }
 

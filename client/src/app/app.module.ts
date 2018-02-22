@@ -25,6 +25,7 @@ import { AuthGuard } from './auth-guard';
 import { AuditcModule } from './auditc/auditc.module';
 import { IbModule } from './ib/ib.module';
 import { NuComponent } from './nuevo-usuario-sesion/nu/nu.component';
+import { InfoinicioComponent } from './auditc/infoinicio/infoinicio.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { NuComponent } from './nuevo-usuario-sesion/nu/nu.component';
     NuevoUsuarioComponent,
     NuevoUsuarioFormaComponent,
     NuevoUsuarioSesionComponent,
-    NuComponent
+    NuComponent,
+    InfoinicioComponent
     // HomeComponent,
   ],
   imports: [
