@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Angular2TokenService } from 'angular2-token';
+import { Validators } from '@angular/forms';
+
 
 import { Usuario } from '../usuario';
 import { UsuarioService } from '../usuario.service'
@@ -21,6 +23,7 @@ export class NuevoUsuarioSesionComponent implements OnInit {
       email: this.model.email,
       password: this.model.password
     });
+    console.log('user sign in enviado')
   }
 
 
