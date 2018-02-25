@@ -28,7 +28,8 @@ export class SumaPuntajeService {
   set_auditC_puntaje() {
     if(this.p1===undefined || this.p2===undefined || this.p3===undefined)
     {this.router.navigate(['auditc/p1'])}
-    else { this.auditC_puntaje = Number(this.p1 + this.p2 + this.p3)}
+    else { this.auditC_puntaje = Number(this.p1 + this.p2 + this.p3)};
+    console.log(this.auditC_puntaje);
     this.navegaRiesgo()
   }
 
