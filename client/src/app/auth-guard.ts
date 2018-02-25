@@ -25,18 +25,4 @@ import { Observable } from 'rxjs/Observable';
          });
        });
      }
-
-     canActivateChild():Observable<boolean>|boolean {
-       this._tokenService.init({
-         validateTokenPath: '/api/auth/validate_token'
-       });
-       return Observable.create(observer => {
-         this._tokenService.validateToken().subscribe(
-           res => {observer.next(true)},
-           err => {
-             this.router.navigate(['/sign-in']);
-             observer.next(false)
-           });
-         });
-       }
 }

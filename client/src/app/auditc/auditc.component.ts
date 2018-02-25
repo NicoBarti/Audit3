@@ -1,24 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {Observable} from 'rxjs/Observable';
+
+import { Puntajes } from '../puntajes';
+import { UsuarioService} from '../usuario.service';
+import {Userinfo} from '../userinfo';
 
 @Component({
-  // selector: 'app-auditc',
-  template: `<router-outlet></router-outlet>`,
-  styleUrls: ['./auditc.component.css'],
-  providers: []
+  selector: 'app-auditc',
+  templateUrl: './auditc.component.html',
+  styleUrls: ['./auditc.component.css']
 })
 
 export class AuditcComponent implements OnInit {
 
-  constructor( private router: Router) { }
+  constructor(private usuarioService: UsuarioService) { }
+
+  // model = new Puntajes(undefined,undefined,undefined,undefined)
+  model = new Puntajes(undefined,undefined,undefined,undefined)
+
+  // userInfo = new Userinfo('','')
 
   ngOnInit() {
-    this.router.navigate(['auditc/infoinicio'])
-  // this.usuarioService.get_userInfo().subscribe(res => {this.model.user_id = res.json().data.id})
+  this.usuarioService.get_userInfo().subscribe(res => {this.model.user_id = res.json().data.id})
   }
 
-  // enviar() {
-  //   this.usuarioService.graba_audit(this.model)
-  // }
+  enviar() {
+    this.usuarioService.graba_audit(this.model)
+  }
 
 }
