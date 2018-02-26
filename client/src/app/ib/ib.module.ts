@@ -21,7 +21,10 @@ import { IbRoutingModule } from './ib-routing.module';
     CommonModule,
     FormsModule,
     IbRoutingModule,
+<<<<<<< HEAD
     // NgbModule,
+=======
+>>>>>>> 727caa58ce8a1e5ce2e3d1ebea28cbffa991cfd0
   ],
   declarations: [
      B1Component,
