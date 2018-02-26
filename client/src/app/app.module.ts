@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
-// import {HttpModule} from '@angular/http';
+import {HttpModule} from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+// import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { Angular2TokenService } from 'angular2-token';
 
@@ -41,7 +41,7 @@ import { InfoinicioComponent } from './auditc/infoinicio/infoinicio.component';
   imports: [
     HttpModule,
     BrowserModule,
-    NgbModule.forRoot(),
+    // NgbModule.forRoot(),
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
@@ -55,6 +55,6 @@ import { InfoinicioComponent } from './auditc/infoinicio/infoinicio.component';
               UsuarioService,
               ConvertirTragosService,
               AuthGuard],
-  bootstrap: [AppComponent]
+  // bootstrap: [AppComponent]
 })
 export class AppModule { }
