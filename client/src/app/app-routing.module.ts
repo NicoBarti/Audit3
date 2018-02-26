@@ -10,6 +10,8 @@ import { AuditcComponent } from './auditc/auditc.component';
 import { BajoComponent } from './ib/bajo/bajo.component';
 import { ModeradoComponent } from './ib/moderado/moderado.component'
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 import { AuthGuard } from './auth-guard';
 
 const routes: Routes = [
@@ -31,7 +33,8 @@ const routes: Routes = [
  ];
 
 @NgModule({
-   imports: [RouterModule.forRoot(routes)],
+   imports: [RouterModule.forRoot(routes),
+   NgbModule,],
    exports: [RouterModule],
    providers: []
  })
