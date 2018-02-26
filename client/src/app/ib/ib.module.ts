@@ -14,14 +14,13 @@ import { M2Component } from './moderado/m2/m2.component';
 import { IbComponent } from './ib.component';
 
 import { IbRoutingModule } from './ib-routing.module';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+// import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IbRoutingModule,
-    NgbModule,
   ],
   declarations: [
      B1Component,
