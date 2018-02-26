@@ -3,8 +3,6 @@ export class Usuario {
     public email: string,
     public name: string,
     public password: string,
-    public passwordConfirmation: string,
-    public sexo: string,
-    public fecha_nac: string
+    public passwordConfirmation: string
 ) {}
 }
