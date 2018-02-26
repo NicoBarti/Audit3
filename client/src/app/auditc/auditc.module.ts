@@ -11,14 +11,14 @@ import { AuditcRoutingModule } from './auditc-routing.module'
 
 import { SumaPuntajeService } from './suma-puntaje.service'
 
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+// import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     AuditcRoutingModule,
-    NgbModule,
+    // NgbModule,
   ],
   declarations: [
      P1Component,

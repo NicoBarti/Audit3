@@ -55,6 +55,6 @@ import { InfoinicioComponent } from './auditc/infoinicio/infoinicio.component';
               UsuarioService,
               ConvertirTragosService,
               AuthGuard],
-  // bootstrap: [AppComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
